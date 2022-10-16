@@ -35,7 +35,7 @@
       // (possible values darwin, linux or win32)
       this.platform = (platform ? platform : Builder.nodeToNwjsPlatform(process.platform));
       // The operating system architecture (possible values "x64" or "ia32")
-      this.architecture = (architecture ? architecture : (process.arch === "x64" ? "x64" : "ia32"));
+      this.architecture = (architecture ? architecture : (process.arch === "x64" ? "x64" : (process.arch === "arm64" ? "arm64" : "ia32"));
       // The directory to store the app files
       this.tempAppFilesDir = "";
       // The directory to create the build in
